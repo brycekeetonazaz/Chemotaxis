@@ -10,40 +10,26 @@ Bacteria bact = new Bacteria(500,400);
  	//move and show the bacteria
  	bact.move();
  	bact.show();
+ 	/*if(keyPressed == true && keyCode == VK_SPACE)
+ 	{
+ 		bact.x = 500;
+ 		bact.y = 400;
+ 	}*/
  }  
  class Bacteria    
  {     
  	//lots of java!  
- 	int myX, myY, myRX,myRY, myClr;
+ 	int myX, myY, myClr;
  	Bacteria(int x,int y)
  	{
  		myX=x;
  		myY=y;
- 		myRX = mouseX;
- 		myRY = mouseY;
  		myClr = (int)(Math.random()*255);
  	}
  	void move()
  	{
- 		myRX = mouseX;
- 		myRY = mouseY;
- 		if(mouseX<myX)
- 		{
- 			myX+=(int)((Math.random()*10));
- 		}
- 		if(mouseY<myY)
- 		{
- 			myY+=(int)((Math.random()*10));
- 		}
- 		if(mouseX>myX)
- 		{
- 			myX-=(int)((Math.random()*10));
- 		}
- 		if(mouseY>myY)
- 		{
- 			myY-=(int)((Math.random()*10));
- 		}
- 		
+ 		myX+=(int)(Math.random()*7)-3;
+ 		myY+=(int)(Math.random()*7)-3;
  	} 
  	void show()
  	{
