@@ -5,25 +5,25 @@
  	//initialize bacteria variables here  
  	size(1000,800); 
  }
- Bacteria bact;
+ Bacteria [] colony = new Bacteria[(int)(Math.random()*2000)+1000];
  void draw()   
  {    
  	//move and show the bacteria
  	background(255,0,0);
  	if(mouseIsPressed == true)
  	{
- 		bact.move();
- 		bact.show();
- 	}
- 	
- 	
- 	
+ 		for(int i = 0; i < colony.length-1; i ++)
+	 	{
+	 		colony[i].move();
+	 		colony[i].show();
+	 	}
+	 }
  }  
  void mousePressed()
  {
- 	for(int i = 0; i < 10; i ++)
+ 	for(int i = 0; i < colony.length-1; i ++)
  	{
- 		bact = new Bacteria(mouseX,mouseY);
+ 		colony[i] = new Bacteria(mouseX,mouseY);
  	}
  	mouseIsPressed = true;
  }
