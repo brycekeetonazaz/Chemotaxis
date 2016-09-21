@@ -5,7 +5,7 @@
  	//initialize bacteria variables here  
  	size(1000,800); 
  }
- Bacteria [] colony = new Bacteria[(int)(Math.random()*2000)+1000];
+ Bacteria [] colony = new Bacteria[(int)(Math.random()*1000)+1000];
  void draw()   
  {    
  	//move and show the bacteria
@@ -35,7 +35,7 @@
  	{
  		myX=x;
  		myY=y;
- 		myClr = (int)(Math.random()*255);
+ 		myClr = color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
  	}
  	void move()
  	{
